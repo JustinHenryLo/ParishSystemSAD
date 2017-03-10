@@ -1,0 +1,591 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3F62E030-3E25-4B9C-92AA-C46BC3942647}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OhWell</RootNamespace>
+    <AssemblyName>OhWell</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Infragistics4.Shared.v16.2, Version=16.2.20162.2040, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics4.Win.Misc.v16.2, Version=16.2.20162.2040, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.v16.2, Version=16.2.20162.2040, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Baptismal\addBaptism.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Baptismal\addBaptism.Designer.cs">
+      <DependentUpon>addBaptism.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Baptismal\ArchiveBaptism.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Baptismal\ArchiveBaptism.Designer.cs">
+      <DependentUpon>ArchiveBaptism.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Baptismal\BaptismalProfiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Baptismal\BaptismalProfiles.Designer.cs">
+      <DependentUpon>BaptismalProfiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Baptismal\baptismalProfileSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Baptismal\baptismalProfileSelect.Designer.cs">
+      <DependentUpon>baptismalProfileSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Baptismal\BaptismalSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Baptismal\BaptismalSelector.Designer.cs">
+      <DependentUpon>BaptismalSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bloodletting\BloodlettingEventProfileList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bloodletting\BloodlettingEventProfileList.Designer.cs">
+      <DependentUpon>BloodlettingEventProfileList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bloodletting\BloodLettingModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bloodletting\BloodLettingModule.Designer.cs">
+      <DependentUpon>BloodLettingModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Confirmations\addConfirmation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Confirmations\addConfirmation.Designer.cs">
+      <DependentUpon>addConfirmation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Confirmations\ArchivedConfirmation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Confirmations\ArchivedConfirmation.Designer.cs">
+      <DependentUpon>ArchivedConfirmation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Confirmations\ConfirmationProfileChooser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Confirmations\ConfirmationProfileChooser.Designer.cs">
+      <DependentUpon>ConfirmationProfileChooser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Confirmations\ConfirmationProfilesView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Confirmations\ConfirmationProfilesView.Designer.cs">
+      <DependentUpon>ConfirmationProfilesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Confirmations\ConfirmationSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Confirmations\ConfirmationSelect.Designer.cs">
+      <DependentUpon>ConfirmationSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bloodletting\EventProfiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bloodletting\EventProfiles.Designer.cs">
+      <DependentUpon>EventProfiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\CashRelease.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\CashRelease.Designer.cs">
+      <DependentUpon>CashRelease.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\Contributor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\Contributor.Designer.cs">
+      <DependentUpon>Contributor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\FinanceModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\FinanceModule.Designer.cs">
+      <DependentUpon>FinanceModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LibrarySelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LibrarySelect.Designer.cs">
+      <DependentUpon>LibrarySelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Marriage\ArchivedMarriage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Marriage\ArchivedMarriage.Designer.cs">
+      <DependentUpon>ArchivedMarriage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Marriage\MarriageSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Marriage\MarriageSelect.Designer.cs">
+      <DependentUpon>MarriageSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Marriage\WeddingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Marriage\WeddingForm.Designer.cs">
+      <DependentUpon>WeddingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Marriage\WeddingProfileChooser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Marriage\WeddingProfileChooser.Designer.cs">
+      <DependentUpon>WeddingProfileChooser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Marriage\WeddingProfilesView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Marriage\WeddingProfilesView.Designer.cs">
+      <DependentUpon>WeddingProfilesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonsLib\ProfileAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonsLib\ProfileAdd.Designer.cs">
+      <DependentUpon>ProfileAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonsLib\Profiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonsLib\Profiles.Designer.cs">
+      <DependentUpon>Profiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonsLib\ProfileList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonsLib\ProfileList.Designer.cs">
+      <DependentUpon>ProfileList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Template.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template.Designer.cs">
+      <DependentUpon>Template.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Baptismal\addBaptism.resx">
+      <DependentUpon>addBaptism.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Baptismal\ArchiveBaptism.resx">
+      <DependentUpon>ArchiveBaptism.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Baptismal\BaptismalProfiles.resx">
+      <DependentUpon>BaptismalProfiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Baptismal\baptismalProfileSelect.resx">
+      <DependentUpon>baptismalProfileSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Baptismal\BaptismalSelector.resx">
+      <DependentUpon>BaptismalSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bloodletting\BloodlettingEventProfileList.resx">
+      <DependentUpon>BloodlettingEventProfileList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bloodletting\BloodLettingModule.resx">
+      <DependentUpon>BloodLettingModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Confirmations\addConfirmation.resx">
+      <DependentUpon>addConfirmation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Confirmations\ArchivedConfirmation.resx">
+      <DependentUpon>ArchivedConfirmation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Confirmations\ConfirmationProfileChooser.resx">
+      <DependentUpon>ConfirmationProfileChooser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Confirmations\ConfirmationProfilesView.resx">
+      <DependentUpon>ConfirmationProfilesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Confirmations\ConfirmationSelect.resx">
+      <DependentUpon>ConfirmationSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bloodletting\EventProfiles.resx">
+      <DependentUpon>EventProfiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\CashRelease.resx">
+      <DependentUpon>CashRelease.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\Contributor.resx">
+      <DependentUpon>Contributor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\FinanceModule.resx">
+      <DependentUpon>FinanceModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LibrarySelect.resx">
+      <DependentUpon>LibrarySelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Marriage\ArchivedMarriage.resx">
+      <DependentUpon>ArchivedMarriage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Marriage\MarriageSelect.resx">
+      <DependentUpon>MarriageSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Marriage\WeddingForm.resx">
+      <DependentUpon>WeddingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Marriage\WeddingProfileChooser.resx">
+      <DependentUpon>WeddingProfileChooser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Marriage\WeddingProfilesView.resx">
+      <DependentUpon>WeddingProfilesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonsLib\ProfileAdd.resx">
+      <DependentUpon>ProfileAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonsLib\Profiles.resx">
+      <DependentUpon>Profiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonsLib\ProfileList.resx">
+      <DependentUpon>ProfileList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template.resx">
+      <DependentUpon>Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\priest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check-list-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\certificate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\growth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hierarchical-structure-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transfer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\archive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profits.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transfusion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\businesswoman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\businessman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transfusion %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id-card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transfusion %281%29_DISABLED.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\archive_DISABLED.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profits_DISABLED.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wedding-rings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Baptismal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fr-Hermogenes-Garcia.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Income_Highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Library_Highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Transfusion_Highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\237815.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iv-bag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iv-bag1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blood.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\followers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Confirmation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Confirmation1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curriculum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\browser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Member_disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\member_highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\member.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BloodReport_Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wedding Profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wedding Report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Baptismal Profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baptismap_disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baptismap_disabled1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baptismal_Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Confirmation Profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\documentation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Baptismal Reports.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Baptismal_reports.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Baptismal_reports1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BaptismReports.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Baptismal Profile1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BaptismReports1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BaptismReports2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Person_Profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curriculum1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wedding-rings1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ring.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\262770.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\office-material.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profileReport.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\team.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contract.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coupon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\statistics.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\network.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\presentation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\statistics1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
